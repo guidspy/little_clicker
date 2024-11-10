@@ -1,42 +1,44 @@
 from tkinter import*
-import time
-import threading
-import sys
-from pynput.keyboard import Listener, KeyCode
-from pynput.mouse import Controller, Button as bb
-import pynput.mouse as mouse
+#import time
+#import threading
+#import sys
+#from pynput.keyboard import Listener, KeyCode
+#from pynput.mouse import Controller, Button as bb
+#import pynput.mouse as mouse
 
 
-clicks = StringVar
+clicks = 1
 
 
 
 def click():
-    clicks.set(clicks, "0.1")
+    clicks = 0.1
+    print(clicks)
 
 def clickc():
-    clicks.set( clicks, "0.01")
+    clicks = 0.01
+    print(clicks)
 
 
-sleepc = float(clicks.get("clicks"))
+#sleepc = float(clicks.get("clicks"))
 
 
 
-def clicker():
-    while True:
-        if clicking:
-            mouse.click(bb.left,1)
-        time.sleep(sleepc)
+#def clicker():
+#    while True:
+#        if clicking:
+#            mouse.click(bb.left,1)
+#        time.sleep(sleepc)
 
 
-def toggle_event(key):
-    if key == TOGGLE_KEY:
-        global clicking
-        clicking = not clicking
+#def toggle_event(key):
+ #   if key == TOGGLE_KEY:
+ #       global clicking
+ #       clicking = not clicking
     
-    elif key == KILL_KEY:
-        clicking = False
-        sys.exit()
+ #  elif key == KILL_KEY:
+ #       clicking = False
+ #       sys.exit()
     
 
 
@@ -57,18 +59,18 @@ c.place( x=170, y=200 )
 
 
 
-TOGGLE_KEY = KeyCode(char="c")
-KILL_KEY = KeyCode(char="k")
+#TOGGLE_KEY = KeyCode(char="c")
+#KILL_KEY = KeyCode(char="k")
 
-clicking = False
-mouse=Controller()
+#clicking = False
+#mouse=Controller()
 
 
-click_thread = threading.Thread(target=clicker)
-click_thread.start()
+#click_thread = threading.Thread(target=clicker)
+#click_thread.start()
 
-with Listener(on_press=toggle_event) as listener:
-    listener.join()
+#with Listener(on_press=toggle_event) as listener:
+#    listener.join()
 
 
 window.mainloop()
