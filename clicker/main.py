@@ -7,16 +7,16 @@ from tkinter import*
 #import pynput.mouse as mouse
 
 
-clicks = 1
+clicks = "1"
 
 
 
 def click():
-    clicks = 0.1
+    clicks = "0.1"
     print(clicks)
 
 def clickc():
-    clicks = 0.01
+    clicks = "0.01"
     print(clicks)
 
 
