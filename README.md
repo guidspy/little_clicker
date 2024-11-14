@@ -1,3 +1,3 @@
-Hello, this is a little project about an autoclicker with 3 different CPS speeds, 
+Hello, this is a little project about an auto-clicker with 3 different CPS speeds, 
 
-the zip folder contains a downloadable app for desktop (～￣▽￣)～
+The zip folder contains a downloadable app for desktop (～￣▽￣)～
